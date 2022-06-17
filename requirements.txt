@@ -1,0 +1,7 @@
+pandas
+firebase_admin
+firebase
+python_jwt
+gcloud
+sseclient
+Crypto
