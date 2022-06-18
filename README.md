@@ -1,3 +1,5 @@
 # h1 Installation
 
-To install: `pip install -r requirements.txt`
+* First set up venv: `python3 -m venv env`
+* Active venv: `source env/bin/activate`
+* Install requirements: `pip install -r requirements.txt`
