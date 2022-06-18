@@ -8,29 +8,43 @@ def authenticate():
     firebase_admin.initialize_app(cred)
 
 def map_location(location):
-    if location=='Amsterdam':
+    if location=='amsterdam':
         return {u'administrativeArea': u'Noord-Holland',
                 u'country': u'Netherlands',
                 u'isoCountryCode': u'NL',
                 u'locality': u'Amsterdam',
                 u'subAdministrativeArea': u'Amsterdam',
                 u'subLocality': u'Amsterdam-Centrum'}
+    elif pd.isna(location):
+        pass
     else:
+        print("Didn't recognize %s" % location)
         return None
 
 def parse_categories(categories):
-    tmp = [x.strip() for x in categories[1:-1].split(',')]
-    print(tmp)
+    tmp = [x.strip() for x in categories.split(',')]
     return tmp
-    
+
+def validate_df(df):
+    columns = ['id', 'name', 'description', 'categories', 'location', 'timestamp', 'status', 'sponsored']
+    nonnull_columns = ['id', 'name', 'description', 'categories', 'timestamp', 'status', 'sponsored']
+    assert (df.columns == columns).all()
+    assert(df[nonnull_columns].isnull().any().any() == False)
+
+def print_df(df):
+    print(df.head())
+
 if __name__ == '__main__':
     authenticate()
-
+    dtypes = {'id': 'str', 'name': 'str', 'description': 'str', 'categories': 'str', 'location': 'str', 'timestamp': 'str', 'status': 'str', 'sponsored': 'bool'}
+    parse_dates = ['timestamp']
     # read contents of csv file
-    df = pd.read_csv("templates.csv", sep=";", header=0)
+    df = pd.read_excel("templates.xlsx", header=0, dtype=dtypes, parse_dates=parse_dates)
+
+    print_df(df)
+    validate_df(df)
 
     templates = firestore.client().collection(u'templates')
-
 
     for i, row in df.iterrows():
         template = templates.document(row['id'])
@@ -41,5 +55,7 @@ if __name__ == '__main__':
             u'location': map_location(row['location']),
             u'status': row['status'].strip(),
             u'sponsored': row['sponsored'],
-            u'timestamp': row['timestamp'].strip(),
+            u'timestamp': row['timestamp'],
         })
+
+    print("Uploaded %d templates" % len(df))
