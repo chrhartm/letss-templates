@@ -30,6 +30,7 @@ def validate_df(df):
     nonnull_columns = ['id', 'name', 'description', 'categories', 'timestamp', 'status', 'sponsored']
     assert (df.columns == columns).all()
     assert(df[nonnull_columns].isnull().any().any() == False)
+    assert(df["id"].is_unique)
 
 def print_df(df):
     print(df.head())
