@@ -16,7 +16,12 @@ def map_location(location):
                 u'subAdministrativeArea': u'Amsterdam',
                 u'subLocality': u'Amsterdam-Centrum'}
     elif pd.isna(location):
-        pass
+        return {u'administrativeArea': None,
+                u'country': None,
+                u'isoCountryCode': None,
+                u'locality': None,
+                u'subAdministrativeArea': None,
+                u'subLocality': None}
     else:
         print("Didn't recognize %s" % location)
         return None
