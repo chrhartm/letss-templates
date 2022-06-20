@@ -45,7 +45,7 @@ if __name__ == '__main__':
     dtypes = {'id': 'str', 'name': 'str', 'description': 'str', 'categories': 'str', 'location': 'str', 'timestamp': 'str', 'status': 'str', 'sponsored': 'bool'}
     parse_dates = ['timestamp']
     # read contents of csv file
-    df = pd.read_excel("templates.xlsx", header=0, dtype=dtypes, parse_dates=parse_dates)
+    df = pd.read_csv("templates.csv", delimiter=';',header=0, dtype=dtypes, parse_dates=parse_dates)
 
     print_df(df)
     validate_df(df)
