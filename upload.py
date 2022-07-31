@@ -31,8 +31,8 @@ def parse_categories(categories):
     return tmp
 
 def validate_df(df):
-    columns = ['id', 'name', 'description', 'categories', 'location', 'timestamp', 'status', 'sponsored']
-    nonnull_columns = ['id', 'name', 'description', 'categories', 'timestamp', 'status', 'sponsored']
+    columns = ['id', 'timestamp', 'name', 'description', 'categories', 'location', 'status', 'sponsored']
+    nonnull_columns = ['id', 'timestamp', 'name', 'description', 'categories', 'status', 'sponsored']
     assert (df.columns == columns).all()
     assert(df[nonnull_columns].isnull().any().any() == False)
     assert(df["id"].is_unique)
