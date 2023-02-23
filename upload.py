@@ -2,6 +2,10 @@
 import pandas as pd
 import firebase_admin
 from firebase_admin import credentials, firestore
+import requests
+import json
+import os
+import time
 
 def authenticate():
     cred = credentials.Certificate("/Users/christoph/Repos/Letss/creds/letss-11cc7-firebase-adminsdk-q3zuh-a094e8d41f.json")
@@ -31,37 +35,77 @@ def parse_categories(categories):
     return tmp
 
 def validate_df(df):
-    columns = ['id', 'timestamp', 'name', 'description', 'categories', 'location', 'status', 'sponsored']
-    nonnull_columns = ['id', 'timestamp', 'name', 'description', 'categories', 'status', 'sponsored']
+    columns = ['Timestamp', 'name', 'description', 'categories', 'location', 'status', 'sponsored', 'persona']
+    nonnull_columns = ['Timestamp', 'name', 'categories', 'status', 'sponsored', 'persona']
     assert (df.columns == columns).all()
     assert(df[nonnull_columns].isnull().any().any() == False)
-    assert(df["id"].is_unique)
+
+def generate_image(template, id, color):
+    functionUrl = "https://europe-west1-letss-11cc7.cloudfunctions.net/activity-promotionImage"
+    payload = {"passphrase": "29rdGDPouc7icnspsdf31S",
+                "activity": template["name"],
+                "persona": template["persona"],
+                "id": id,
+                "color": color}
+    headers = {'content-type': 'application/json'}
+    print(payload)
+    response = requests.post(functionUrl, data=json.dumps(payload), headers=headers)
+    return response.json()["url"]["url"]
+
+def download_picture(url, filename):
+    print(url)
+    img_data = requests.get(url).content
+
+    if not os.path.exists("./images"):
+        os.makedirs("./images")
+
+    with open('./images/'+filename+ '.png', 'wb') as handler:
+        handler.write(img_data)
 
 def print_df(df):
     print(df.head())
 
+def clean_df(df):
+    df["name"] = df["name"].str.strip()
+    df["description"] = df["description"].str.strip()
+    df["status"] = df["status"].str.strip()
+    df["persona"] = df["persona"].str.strip()
+
 if __name__ == '__main__':
     authenticate()
-    dtypes = {'id': 'str', 'name': 'str', 'description': 'str', 'categories': 'str', 'location': 'str', 'timestamp': 'str', 'status': 'str', 'sponsored': 'bool'}
-    parse_dates = ['timestamp']
+    dtypes = {'id': 'str', 'name': 'str', 'description': 'str', 'categories': 'str', 'location': 'str', 'Timestamp': 'str', 'status': 'str', 'sponsored': 'bool'}
+    parse_dates = ['Timestamp']
     # read contents of csv file
-    df = pd.read_csv("templates.csv", delimiter=';',header=0, dtype=dtypes, parse_dates=parse_dates)
+    df = pd.read_csv("templates.csv", delimiter=',',header=0, dtype=dtypes, parse_dates=parse_dates)
+
+    colors = ["#FF9800", "#ED7014", "#FA8128", "#FC6103", "#DD571C", "#FF5800", "#FF4F00", "#00B9BC", "#00A5A7", "#009093", "#007C7D", "#006769", "#005254"]
 
     print_df(df)
     validate_df(df)
+    clean_df(df)
 
-    templates = firestore.client().collection(u'templates')
+    # templates = firestore.client().collection(u'templates')
 
-    for i, row in df.iterrows():
-        template = templates.document(row['id'])
-        template.set({
-            u'name': row["name"].strip(),
-            u'description': row['description'].strip(),
-            u'categories': parse_categories(row['categories']),
-            u'location': map_location(row['location']),
-            u'status': row['status'].strip(),
-            u'sponsored': row['sponsored'],
-            u'timestamp': row['timestamp'],
-        })
+    #for i, row in df.iterrows():
+        # update_time, response = templates.add({
+        #     u'name': row["name"],
+        #     u'description': row['description'],
+        #     u'categories': parse_categories(row['categories']),
+        #     u'location': map_location(row['location']),
+        #     u'status': row['status'],
+        #     u'sponsored': row['sponsored'],
+        #     u'timestamp': row['Timestamp'],
+        #     u'persona': row['persona']
+        # })
+
+    for color in colors:
+
+        fileId = "test_" + color # response.id
+
+        color = color
+
+        url = generate_image(df.loc[0], fileId, color)
+        time.sleep(1)
+        download_picture(url, fileId)
 
     print("Uploaded %d templates" % len(df))
