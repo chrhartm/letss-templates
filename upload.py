@@ -104,7 +104,8 @@ if __name__ == '__main__':
         if config["upload"]:
             update_time, response = templates.add({
                 u'name': row["name"],
-                u'description': row['description'],
+                # Removed description
+                u'description': "", # row['description'],
                 u'categories': parse_categories(row['categories']),
                 u'location': map_location(row['location']),
                 u'status': row['status'],
