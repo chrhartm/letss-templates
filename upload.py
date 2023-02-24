@@ -76,7 +76,7 @@ def print_df(df):
     print(df.head())
 
 def clean_df(df):
-    df["name"] = df["name"].str.strip() + " 😊🚀🧗"
+    df["name"] = df["name"].str.strip()
     df["description"] = df["description"].str.strip()
     df["status"] = df["status"].str.strip()
     df["persona"] = df["persona"].str.strip()
