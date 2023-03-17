@@ -1,5 +1,6 @@
 # Virtual environment
 env/*
 images/*
+output.csv
 
 .DS_Store

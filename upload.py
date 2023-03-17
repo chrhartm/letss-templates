@@ -15,6 +15,7 @@ parser.add_argument("-n", "--number", default=None, type=int, help="number of el
 parser.add_argument("-u", "--upload", default=False, action=argparse.BooleanOptionalAction, help="flag for if anything should be uploaded")
 parser.add_argument("-c", "--colors", default=False, action=argparse.BooleanOptionalAction, help="generate images with different colors")
 parser.add_argument("-i", "--image", default=False, action=argparse.BooleanOptionalAction, help="flag for generating and downloading images")
+parser.add_argument("-p", "--path", default=None, type=str, help="path to csv file")
 
 
 def authenticate():
@@ -45,9 +46,8 @@ def parse_categories(categories):
     return tmp
 
 def validate_df(df):
-    columns = ['Timestamp', 'name', 'description', 'categories', 'location', 'status', 'sponsored', 'persona']
-    nonnull_columns = ['Timestamp', 'name', 'categories', 'status', 'sponsored', 'persona']
-    assert (df.columns == columns).all()
+    columns = ['timestamp', 'name', 'description', 'categories', 'location', 'status', 'sponsored', 'persona', 'ID']
+    nonnull_columns = ['timestamp', 'name', 'categories', 'status', 'persona']
     assert(df[nonnull_columns].isnull().any().any() == False)
 
 def generate_image(template, id, color):
@@ -78,8 +78,9 @@ def print_df(df):
 def clean_df(df):
     df["name"] = df["name"].str.strip()
     df["description"] = df["description"].str.strip()
-    df["status"] = df["status"].str.strip()
+    df["status"] = df["status"].str.strip().apply(lambda x: "ACTIVE" if x=="QUEUED" else x)
     df["persona"] = df["persona"].str.strip()
+    df["sponsored"] = df["sponsored"].apply(lambda x: x != "No")
 
 if __name__ == '__main__':
     args = parser.parse_args()
@@ -87,10 +88,10 @@ if __name__ == '__main__':
     print(config)
 
     authenticate()
-    dtypes = {'id': 'str', 'name': 'str', 'description': 'str', 'categories': 'str', 'location': 'str', 'Timestamp': 'str', 'status': 'str', 'sponsored': 'bool'}
-    parse_dates = ['Timestamp']
+#     dtypes = {'id': 'str', 'name': 'str', 'description': 'str', 'categories': 'str', 'location': 'str', 'timestamp': 'str', 'status': 'str', 'sponsored': 'str'}
+    parse_dates = ['timestamp']
     # read contents of csv file
-    df = pd.read_csv("templates.csv", delimiter=',',header=0, dtype=dtypes, parse_dates=parse_dates)
+    df = pd.read_csv(config["path"], delimiter=',',header=0, dtype=str, parse_dates=parse_dates)
 
     colors = ["#FF9800", "#ED7014", "#FA8128", "#FC6103", "#DD571C", "#FF5800", "#FF4F00", "#00B9BC", "#00A5A7", "#009093", "#007C7D", "#006769", "#005254"]
 
@@ -99,8 +100,10 @@ if __name__ == '__main__':
     clean_df(df)
 
     templates = firestore.client().collection(u'templates')
+    IDindex = df.columns.get_loc("ID")
+    end = config["start"]+config["number"]-1 if config["number"] else df.shape[0]-config["start"]
 
-    for i, row in df.loc[config["start"]:config["number"]].iterrows():
+    for i, row in df.loc[config["start"]:end].iterrows():
         if config["upload"]:
             update_time, response = templates.add({
                 u'name': row["name"],
@@ -110,13 +113,14 @@ if __name__ == '__main__':
                 u'location': map_location(row['location']),
                 u'status': row['status'],
                 u'sponsored': row['sponsored'],
-                u'timestamp': row['Timestamp'],
+                u'timestamp': row['timestamp'],
                 u'persona': row['persona']
             })
             fileId = response.id
         else:
             fileId = "test"
-        
+
+        df.iloc[i,IDindex] = fileId
 
         if config["image"]:
             if config["colors"]:
@@ -134,4 +138,4 @@ if __name__ == '__main__':
                 time.sleep(1)
                 download_picture(url, imageTitle)
 
-    print("Uploaded %d templates" % i)
+    df.to_csv("output.csv", index=False)
