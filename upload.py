@@ -78,6 +78,8 @@ def print_df(df):
 def clean_df(df):
     df["name"] = df["name"].str.strip()
     df["description"] = df["description"].str.strip()
+    df.drop(df[df["status"] != "QUEUED"].index, inplace=True)
+    df.reset_index(drop=True, inplace=True)
     df["status"] = df["status"].str.strip().apply(lambda x: "ACTIVE" if x=="QUEUED" else x)
     df["persona"] = df["persona"].str.strip()
     df["sponsored"] = df["sponsored"].apply(lambda x: x != "No")
@@ -96,8 +98,9 @@ if __name__ == '__main__':
     colors = ["#FF9800", "#ED7014", "#FA8128", "#FC6103", "#DD571C", "#FF5800", "#FF4F00", "#00B9BC", "#00A5A7", "#009093", "#007C7D", "#006769", "#005254"]
 
     print_df(df)
-    validate_df(df)
     clean_df(df)
+    validate_df(df)
+
 
     templates = firestore.client().collection(u'templates')
     IDindex = df.columns.get_loc("ID")
@@ -120,6 +123,7 @@ if __name__ == '__main__':
         else:
             fileId = "test"
 
+        print(i)
         df.iloc[i,IDindex] = fileId
 
         if config["image"]:
