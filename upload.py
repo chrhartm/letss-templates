@@ -86,6 +86,7 @@ def clean_df(df):
     df["status"] = df["status"].str.strip().apply(lambda x: "ACTIVE" if x=="QUEUED" else x)
     df["persona"] = df["persona"].str.strip()
     df["sponsored"] = df["sponsored"].apply(lambda x: x != "No")
+    df["ID"] = df["ID"].str.strip()
 
 if __name__ == '__main__':
     args = parser.parse_args()
