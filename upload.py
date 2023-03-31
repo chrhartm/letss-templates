@@ -73,12 +73,15 @@ def download_picture(url, filename):
     print("Downloaded " + filename)
 
 def print_df(df):
-    print(df.head())
+    print(df.head(5))
 
 def clean_df(df):
     df["name"] = df["name"].str.strip()
     df["description"] = df["description"].str.strip()
-    df.drop(df[df["status"] != "QUEUED"].index, inplace=True)
+    if config["upload"]:
+        df.drop(df[df["status"] != "QUEUED"].index, inplace=True)
+    else:
+        df.drop(df[df["status"] == "IDEA"].index, inplace=True)
     df.reset_index(drop=True, inplace=True)
     df["status"] = df["status"].str.strip().apply(lambda x: "ACTIVE" if x=="QUEUED" else x)
     df["persona"] = df["persona"].str.strip()
@@ -101,10 +104,13 @@ if __name__ == '__main__':
     clean_df(df)
     validate_df(df)
 
+    print(df.shape)
 
     templates = firestore.client().collection(u'templates')
     IDindex = df.columns.get_loc("ID")
-    end = config["start"]+config["number"]-1 if config["number"] else df.shape[0]-config["start"]
+    end = config["start"]+config["number"]-1 if config["number"] else df.shape[0]-1
+
+    print(config["start"], end)
 
     for i, row in df.loc[config["start"]:end].iterrows():
         if config["upload"]:
@@ -121,9 +127,13 @@ if __name__ == '__main__':
             })
             fileId = response.id
         else:
-            fileId = "test"
+            print(row["ID"])
+            if row["ID"] == "": 
+                fileId = "test"
+            else:
+                fileId = row["ID"]
 
-        print(i)
+        print(i, fileId, row["name"])
         df.iloc[i,IDindex] = fileId
 
         if config["image"]:
