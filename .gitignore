@@ -1,6 +1,7 @@
 # Virtual environment
 env/*
 images/*
-output.csv
+# Keep a backup of all templates
+# output.csv
 
 .DS_Store

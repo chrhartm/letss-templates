@@ -46,8 +46,8 @@ def parse_categories(categories):
     return tmp
 
 def validate_df(df):
-    columns = ['timestamp', 'name', 'description', 'categories', 'location', 'status', 'sponsored', 'persona', 'ID']
-    nonnull_columns = ['timestamp', 'name', 'categories', 'status', 'persona']
+    columns = ['timestamp', 'name', 'description', 'categories', 'location', 'status', 'language', 'sponsored', 'persona', 'ID']
+    nonnull_columns = ['timestamp', 'name', 'categories', 'status', 'language', 'persona']
     assert(df[nonnull_columns].isnull().any().any() == False)
 
 def generate_image(template, id, color):
@@ -85,6 +85,7 @@ def clean_df(df):
     df.reset_index(drop=True, inplace=True)
     df["status"] = df["status"].str.strip().apply(lambda x: "ACTIVE" if x=="QUEUED" else x)
     df["persona"] = df["persona"].str.strip()
+    df["language"] = df["language"].str.strip()
     df["sponsored"] = df["sponsored"].apply(lambda x: x != "No")
     df["ID"] = df["ID"].str.strip()
 
@@ -97,7 +98,7 @@ if __name__ == '__main__':
 #     dtypes = {'id': 'str', 'name': 'str', 'description': 'str', 'categories': 'str', 'location': 'str', 'timestamp': 'str', 'status': 'str', 'sponsored': 'str'}
     parse_dates = ['timestamp']
     # read contents of csv file
-    df = pd.read_csv(config["path"], delimiter=',',header=0, dtype=str, parse_dates=parse_dates)
+    df = pd.read_csv(config["path"], delimiter=';',header=0, dtype=str, parse_dates=parse_dates)
 
     colors = ["#FF9800", "#ED7014", "#FA8128", "#FC6103", "#DD571C", "#FF5800", "#FF4F00", "#00B9BC", "#00A5A7", "#009093", "#007C7D", "#006769", "#005254"]
 
@@ -122,6 +123,7 @@ if __name__ == '__main__':
                 u'categories': parse_categories(row['categories']),
                 u'location': map_location(row['location']),
                 u'status': row['status'],
+                u'language' : row['language'],
                 u'sponsored': row['sponsored'],
                 u'timestamp': row['timestamp'],
                 u'persona': row['persona']

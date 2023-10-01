@@ -1,0 +1,129 @@
+name,timestamp,status,persona,categories,location,language,description,sponsored,ID
+Let's watch monkeys and contemplate life,2023-03-24,ACTIVE,philosophers,"animals, monkeys, outdoor, zoo",amsterdam,en,,True,ZmnE5OBIx1QnUoqvjLx5
+Let's learn how to cook,2023-03-17,ACTIVE,cooks,"class, cooking, food",,en,,True,EMu3FnYPAjYGxdjGcsQl
+Let's put googly eyes accross the city,2023-03-16,ACTIVE,pranksters,"googly eyes, mission, outdoor, pranks",,en,,True,qaf93kRXKvVEfwPE9bMp
+Let's dress up and go to the opera,2023-03-17,ACTIVE,divas,"classical music, culture, dress up, indoor, music, opera",,en,,True,48TP9zadZqK5rRB9J5rN
+Let's get lost in trance at a rave,2023-03-24,ACTIVE,hippies,"dancing, hippie, psytrance, rave, trance",amsterdam,en,,True,3c1Hecx6likcZpfMe5B2
+Let's take tinder pictures,2023-03-14,ACTIVE,daters,"dating, dating apps, photoshoot, pictures",,en,,True,tgorfAFl0H1UBiKc61Bc
+Let's check out jam sessions,2023-03-17,ACTIVE,musicians,"dancing, jam, live music",amsterdam,en,,True,hdBzUPiTw8yLC9pFXpXd
+Let’s volunteer at a shelter,2023-03-24,ACTIVE,do-gooders,"help, kindness, volunteering",,en,,True,VI6kCriO4xEX0AcZiv7y
+Let's eat at a community kitchen,2023-03-24,ACTIVE,squatters,"community, food, hippie, non-commercial, sharing",amsterdam,en,,True,WrU3eRNP5zv4ssXlk8Oe
+Let's go slacklining,2023-03-17,ACTIVE,slackers,"outdoor, slackline, sports",,en,,True,OtnkX9rQuLb0GD82kj3t
+Let's start a book club,2023-03-17,ACTIVE,bookworms,"book club, books, reading",,en,,True,vZhMRRrhc4IYWQKevkfJ
+Let's start a podcast club,2023-03-15,ACTIVE,podcast fans,"book club, podcasts",,en,,True,Y18LQQfSCFvlQmd252Rs
+Let’s get a blind ticket on ticketswap,2023-03-23,ACTIVE,gigs,"festival, live music, music, random, yolo",,en,,True,n5QALP8ejtQ0zKBhvsn3
+Let's learn salsa dancing,2023-03-17,ACTIVE,dancers,"bachata, dancing, salsa",,en,,True,v3Gy9nbK5ed57ouD1Cb3
+Let's start a startup,2023-03-17,ACTIVE,entrepreneurs,"apps, business, startup, tech",,en,,True,P3ixNAIuc1unPY9lnb6c
+Let's take a train to Pairs,2023-03-17,ACTIVE,explorers,"food, france, paris, travel",amsterdam,en,,True,TJgZimZRhQ08EFXIUIhB
+Let's play board games on a rainy day,2023-03-17,ACTIVE,nerds,"board games, cafe, rain, weekend",amsterdam,en,,True,zQrKECGVdDn9bUP6NBgQ
+Let's learn how to play guitar,2023-03-17,ACTIVE,musicians,"guitar, learning, music",,en,,True,rqUHCLmW3UgAOcWBjZ7b
+Let's go see an indie movie,2023-03-17,ACTIVE,cineasts,"cinema, cineville, movies",amsterdam,en,,True,nX3CVfo526wyLXt6GL4f
+Let's play basketball,2023-03-17,ACTIVE,athletes,"basketball, sports, team",,en,,True,0pXIPL9eKKB1FdVWxy6B
+Let's get a hotdog at IKEA,2023-03-15,ACTIVE,IKEA fans,"food, furniture, hotdog, ikea, interior design",,en,,True,5rrpTDGk5dbcDWx5ky43
+Let's figure out crypto,2023-03-16,ACTIVE,crypto bros,"bitcoin, crypto, investing, money",,en,,True,c6UqmvHzXFdZT5bU6CFA
+Let's do a potluck dinner,2023-03-16,ACTIVE,foodies,"dinner, eating, food, potluck",,en,,True,lvo8DEG4Z5Y1qBNvZZXI
+Let's organize a running dinner,2023-03-14,ACTIVE,foodies,"dinner, eating, food",,en,,True,pgUQnjLMc9sfdAk4xLjb
+Let's crash art gallery parties,2023-03-17,ACTIVE,crashers,"art, dancing, galleries, party",,en,,True,GeDqBobhG40xBgxaWjsl
+Let's be vegan for a week,2023-03-16,ACTIVE,vegans,"eating, food, support, vegan",,en,,True,N1cHYrXWtLuuPRjIBlkD
+Let's fix my terrible fashion style,2023-03-15,ACTIVE,fashionistas,"fashion, shopping, style",,en,,True,HfMiABwP8z9MVi6EOYkA
+Let's find the best veggi ramen,2023-03-17,ACTIVE,foodies,"dinner, eating, food, ramen, vegetarian",,en,,True,cOfoczBuYyGsFNjTE7vQ
+Let's read poems in nature,2023-03-17,ACTIVE,romantics,"nature, picnic, poems, reading",,en,,True,R8Q2r6TOuqqOFn7epUPl
+Let's contemplate life over a beer,2023-03-17,ACTIVE,nihilists,"beer, contemplation, discussion, spirituality",,en,,True,pkGNlwIL5ubpVdr9HSrU
+Let's start a men's group,2023-03-16,ACTIVE,men,"group, men, sharing, support",,en,,True,MZXOHOEFUaoPkBfUw5jX
+Let's discuss spiritual texts,2023-03-17,ACTIVE,frustrated atheists,"god, religion, spirituality",,en,,True,7Zoznhi4wpCS8u2AcE2s
+Let's organize a LAN party,2023-03-16,ACTIVE,gamers,"gaming, lan, party",,en,,True,7IBD7gEZ5v4MsPoNQhGM
+Let's go to a wedding as my +1,2023-03-14,ACTIVE,singles,"dinner, party, singles, wedding",,en,,True,qXaWC4iTkGrGdh7CzCAT
+Let’s be accountability buddies,2023-03-16,ACTIVE,productivity nerds,"accountability, nerds, productivity",,en,,True,Ucsa7KjMllH3EXPwXlAR
+Let’s take my dog for a walk,2023-03-24,ACTIVE,dog lovers,"dogs, nature, outdoor, walk",,en,,True,IqhMuzrW1xqocwVz9zAr
+Let’s study together at the library,2023-03-23,ACTIVE,students,"library, students, studying, support",,en,,True,ubHzWRJt33JCvmlvNkph
+Let’s make my cat love you,2023-03-22,ACTIVE,cat lovers,"cats, chill, indoor",,en,,True,n9Cgws6nqu8BIR3Op6HN
+Let’s brew our own beer,2023-03-22,ACTIVE,brewers,"beer, brewing, business, startup",,en,,True,TO2lSE2drIwLF6gqkf7o
+Let’s take my van and go kitesurfing,2023-03-24,ACTIVE,surfers,"kitesurfing, outdoor, sports, surfing, vanlife",,en,,True,LoMBSMm8EXY93MfMKNBy
+Let’s teach a skill to each other,2023-03-24,ACTIVE,teachers,"learning, skill share, teaching",,en,,True,wInj89k36uQpwziCSelT
+Let’s live on the street for a day,2023-03-21,ACTIVE,adventurers,"adventure, experience, outdoor",,en,,True,7jtMHhbN4Ov5Lc5QbsMd
+Let’s give free hugs to strangers,2023-03-24,ACTIVE,hippies,"hippie, hugs, kindness",,en,,True,7hDW8T1MBTOdZJVIJAqs
+Let’s make the perfect negroni,2023-03-24,ACTIVE,negronis,"cocktails, drinks, skill share",,en,,True,UoUV7sEPpeu42XpwZxrN
+Let’s move somewhere warm,2023-03-23,ACTIVE,digital nomads,"move, remote, thailand, travel",,en,,True,tYUWgttlxnkEDHu4WOSH
+Let’s create street art,2023-03-23,ACTIVE,artists,"art, creating, graffiti, outdoor",,en,,True,k4kXVt0KS0B10mOtfzSK
+Let’s stop smoking together,2023-03-24,ACTIVE,smokers,"accountability, health, smoking",,en,,True,ZPqTvVfk4WGi9rXFt06j
+Let’s start a book club on the bible,2023-03-23,ACTIVE,bookworms,"book club, books, christian, reading",,en,,True,rB7AoiWz8D70MMLvvkEO
+Let’s watch ALL Harry Potter movies,2023-03-24,ACTIVE,harry potter lovers,"chill, marathon, movies",,en,,True,GXa9F6WDUbzCoZ2evEDM
+Let’s swap our favourite books,2023-03-24,ACTIVE,bookworms,"books, reading, sharing",,en,,True,7LxooqFLeNvX26CP798H
+Let’s learn coding,2023-03-23,ACTIVE,geeks,"accountability, coding, learning",,en,,True,kbLZQCAlBhpuaXuVZKWE
+Let’s knit some socks over a tea,2023-03-22,ACTIVE,grannies,"chill, crafting, knitting",,en,,True,lVm0mmC0KXhEdODWaT5V
+Let’s plant flowers in public spaces,2023-03-24,ACTIVE,gardeners,"flowers, gardening, outdoor, plants",,en,,True,DmLxoFUJfL9zdSmhtt7e
+Let’s grab a beer and look at the stars,2023-03-23,ACTIVE,dreamers,"beer, contemplation, drinks, outdoor",,en,,True,HnZMxoI2sYafhbBmKCY2
+Let’s go out and meet new people,2023-03-24,ACTIVE,extroverts,"dancing, drinks, party",,en,,True,Y6xcNFXnXfIvzRzU6hqF
+Let’s make a YouTube video,2023-03-24,ACTIVE,influencers,"creating, skill share, social media, videos",,en,,True,my4pKuVmNpQmvY2Od5Bi
+Let’s buy stocks and get rich,2023-03-24,ACTIVE,investors,"FIRE, investing, money",,en,,True,5NyZP00T7OoFcBblMFRw
+Let’s ask a stranger for their story,2023-03-24,ACTIVE,curious minds,"experience, exploring, sharing, stories",,en,,True,N2wXNybbFcxB8luw7jOg
+Let’s be eccentric at an art gallery,2023-03-23,ACTIVE,hipsters,"art, fashion, self expression",,en,,True,VSRxEDJt7OdT4ZDp2s9o
+Let’s be children and go to a circus,2023-03-23,ACTIVE,inner children,"circus, events, silly",,en,,True,Wjj8I1cblCZQ62ckrpOL
+Let’s go tasting at a farmers market,2023-03-24,ACTIVE,farmers,"food, shopping, sustainability",,en,,True,LxlUXeXOk8VzLuIBDgiD
+Let’s go skating in Vondelpark,2023-03-24,ACTIVE,skaters,"outdoor, park, skating",amsterdam,en,,True,04aqBywUX7PSr8zMLIe8
+Let’s learn a dance choreo,2023-03-22,ACTIVE,dancers,"dancing, learning, performance",,en,,True,oNKFuJKXWNBSKIz9EKFG
+Let’s get really good at karaoke,2023-03-24,ACTIVE,singers,"karaoke, learning, party, singing",,en,,True,bVr1go2cd2IeF3x2uTFf
+Let’s watch Disney movies,2023-03-23,ACTIVE,mermaids,"movies, party, throwback",,en,,True,jEYw2VCI8iyEOezzIu1R
+Let’s try swing dancing to 20s music,2023-03-23,ACTIVE,dancers,"dancing, music, swing",,en,,True,7oqDUsze7CPkWLuRXoiq
+Let’s have a picnic in the sun,2023-03-23,ACTIVE,picnics,"chill, food, nature, outdoor",,en,,True,uIi3CAh8YaYAn6HKyag6
+Let’s smash buttons at an arcade,2023-03-24,ACTIVE,gamers,"arcade, competition, gaming",,en,,True,FWj6fvUXtH73JGlsFwwr
+Let’s try watercolour painting,2023-03-20,ACTIVE,artists,"art, learning, painting",,en,,True,9mOxsMuG510hKWbjwHgU
+Let’s paint like Bob Ross,2023-03-24,ACTIVE,trees,"art, chill, painting",,en,,True,ZJruYUzLVOfEasbsBek6
+Let’s get sweaty in a mosh pit,2023-03-22,ACTIVE,moshers,"beer, dancing, energy, metal, rock",,en,,True,EFxuymvj5VkknoFrCij7
+Let’s journal in a cafe,2023-03-24,ACTIVE,writers,"cafe, growth, reflection, writing",,en,,True,hcUUdq1e38OQBoTu2rG2
+Let’s hit some golf balls,2023-03-23,ACTIVE,golfers,"exercise, golf, outdoor",,en,,True,PggIjtVornx5VGIiwgQp
+Let’s go nuts for a local team,2023-03-24,ACTIVE,fans,"energy, soccer, support",,en,,True,lSJ0mFngKq785qCUSvNA
+Let’s pet some alpackas,2023-03-23,ACTIVE,animal lovers,"animals, outdoor, relaxing",amsterdam,en,,True,T7tqIxX0yAcFLD9pPpzC
+Let’s play Mario Kart on energy drinks,2023-03-24,ACTIVE,gamers,"energy, gaming, party",,en,,True,krdESYin1Ll8Bn2tBFK5
+Let's get a guiness book record,2023-03-24,ACTIVE,winners,"competition, learning, silly",,en,,True,YOKiY91lymUrtSo5jYkx
+Let’s practice handstands,2023-03-24,ACTIVE,yogis,"exercise, handstand, sports, yoga",,en,,True,YKeJjbaZOPJ99PQipnsr
+Let’s learn bouldering tricks,2023-03-24,ACTIVE,climbers,"bouldering, growth, skill share, sports",,en,,True,ev1nxO0hdAtgu9MYya8M
+Let’s join a soccer team,2023-03-23,ACTIVE,team players,"competition, soccer, sports, team",,en,,True,HXsg8Tj4ZBgBQJIscVen
+Let’s go race biking,2023-03-24,ACTIVE,cyclists,"nature, outdoor, race bike, sports",,en,,True,ONfrDmDhKhXtOOKlep7m
+Let’s start a country band,2023-03-22,ACTIVE,banjo players,"band, country, live music, music, team",,en,,True,s8OoTZ64kqhv3i4XeD8s
+Let’s pray together,2023-03-24,ACTIVE,believers,"contemplation, praying, spirituality, support",,en,,True,IJ4IAhL7XukLppeeYfBS
+Let’s learn all about photography by job shadowing me,2023-03-23,ACTIVE,photographers,"growth, photography, photoshoot, skill share",,en,,True,mKmz2vj7JKINsJePkocU
+Let’s coach each other on our careers,2023-03-24,ACTIVE,coaches,"career, coaching, growth, learning, skill share",,en,,True,1IKTdiL2rYDUXwx9kZyL
+Let’s go sailing this Saturday,2023-03-22,ACTIVE,sailors,"drinks, outdoor, sailing, sports",,en,,True,tbNs7JBnAM79CD3oITdB
+Let’s catch some fish,2023-03-23,ACTIVE,fishers,"beer, fishing, nature, outdoor",,en,,True,sRLiPK1aAIM9itMjy2DX
+Let’s cheer for Ajax,2023-03-23,ACTIVE,fans,"football, sports, team",,en,,True,oqF2lzJh1Jw07HYsOpf5
+Let’s explore consciousness,2023-03-23,ACTIVE,meditators,"mental health, mindfulness, self-improvement, spirituality",,en,,True,sqjj5k6TuNluq3AGdhWp
+Let’s co-work at Seats2Meet,2023-03-23,ACTIVE,entrepreneurs,"community, coworking, entrepreneurship, networking, productivity, skill share",,en,,True,2IsR9cZ4kzB1obu3ugV6
+Let’s help out at a community garden,2023-03-23,ACTIVE,gardeners,"community, gardening, nature, sustainability",,en,,True,yk6ohwu8b1QLOZVLdsGG
+Let’s learn poi spinning,2023-03-23,ACTIVE,performers,"circus, performance, skill share",,en,,True,LLRj7N2eAE5TZ8mfGdRv
+Let’s go on a Dungeons & Dragons adventure,2023-03-23,ACTIVE,nerds,"adventure, board games, fantasy, gaming",,en,,True,q1v163LHvSRXffMTccfO
+Let’s watch our children play,2023-03-23,ACTIVE,parents,"children, family, parenting, socializing",,en,,True,ve1b0MyizJ0LGLBFMnc1
+Let’s try fencing,2023-03-23,ACTIVE,adventurers,"adventure, exercise, learning, sports",,en,,True,1VrJPyxz9Ec6AAsykNP8
+Let’s be language tandem partners,2023-03-23,ACTIVE,students,"culture, exchange, language, skill share",,en,,True,lSXmpbNGsynwkp5XMvVi
+Let’s play squash this Thursday,2023-03-23,ACTIVE,buddies,"competition, fitness, indoor, sports",,en,,True,OB3H41pjpni8CItuyGxi
+Let’s try padel,2023-03-23,ACTIVE,buddies,"socializing, sports, tennis",,en,,True,MfhoX9LNoir72vZmcyox
+Let’s dance in the sun,2023-03-23,ACTIVE,ravers,"festival, music, socializing",,en,,True,g2rwHSqaBPuV0QwyvAZY
+Let’s watch arthouse movies,2023-03-23,ACTIVE,cineasts,"culture, film, independent, movies",,en,,True,nNIzOZDHRCtCYQkZGjyc
+Let’s explore our colonial history,2023-03-23,ACTIVE,historians,"culture, history, learning, museum",,en,,True,w8mVkq7lAj1ej1TnYS5U
+Let’s learn to DJ,2023-03-23,ACTIVE,DJs,"dj, music, skill share",,en,,True,xUCAovXwFP3tuLiiJsSW
+Let’s explore Noord together,2023-03-17,ACTIVE,explorers,"adventure, exploring, noord, outdoor",amsterdam,en,,True,a6aDwYtJvPEgWmNTTajO
+Let’s go to a comedy show,2023-03-23,ACTIVE,buddies,"comedy, entertainment, humor",,en,,True,FQPmpKreGoTbxb5ESLKD
+Let’s discuss modern art,2023-03-23,ACTIVE,intellectuals,"art, culture, indoor, museum",,en,,True,I8H5wEJu7X6DyLRVkm6n
+Let’s watch a dance performance,2023-03-23,ACTIVE,hipsters,"culture, performance, theater",,en,,True,9EbrYEssPZ3RxohOJLVS
+Let’s be a guinea pig at TestTafel,2023-03-23,ACTIVE,foodies,"cooking, experiments, food",,en,,True,dY5g5WDx3nVWIiRwSdIX
+Let’s perform at an open mic,2023-03-23,ACTIVE,comedians,"comedy, music, performance, spoken word",,en,,True,TFYTrT9S4RzEgCNx5mTC
+Let’s find our next festival outfit,2023-03-23,ACTIVE,ravers,"fashion, festival, shopping",,en,,True,bSWYJqexjh4E2XDU3tyO
+Let’s marvel at Escher’s art,2023-03-23,ACTIVE,art students,"art, culture, museum",,en,,True,LhO2UTBHwbwI3cZA4dl1
+Let’s work on ourselves,2023-03-23,ACTIVE,self-helpers,"growth, self-improvement, skill share",,en,,True,VBsVbXMPHFe0zord6Ea6
+Let’s check out squat events,2023-03-23,ACTIVE,dreamers,"activism, alternative, culture, underground",,en,,True,XHnj9IFSy7vjwf9WX9uo
+Let’s buy a boat for the summer,2023-03-23,ACTIVE,sailors,"adventure, boat, outdoor",,en,,True,bhNEM1WRFJy7sRtbjYe6
+Let’s hunt down some geocaches,2023-03-23,ACTIVE,explorers,"adventure, exploring, outdoor",,en,,True,PkUkkH84nNDrYvdCsMWU
+Let’s taste some natural wines,2023-03-23,ACTIVE,connoisseurs,"food, tasting, wine",,en,,True,s4PUxbDt4OvJkANKo5a5
+Let’s go shopping in Paris,2023-03-23,ACTIVE,cosmopolitans,"culture, fashion, shopping, travel",,en,,True,gxC0R26XsuLiOlqe4IUr
+Let’s try to find Dutch nature,2023-03-23,ACTIVE,city people,"exercise, hiking, nature, outdoor",,en,,True,grVkgOkQOl4teup2teem
+Let’s rave,2023-03-23,ACTIVE,ravers,"music, nightlife, rave",,en,,True,HVgIYvAPY9qBnunplRiY
+Let’s try improv theatre,2023-03-23,ACTIVE,comedians,"comedy, learning, theater",,en,,True,diGNmjtx8ZXQMefnbxxv
+Let’s go see a gig,2023-03-23,ACTIVE,groupies,"live music, music, performance",,en,,True,5azUq4Tn4Zw2SUpolt6k
+Let’s get high at the planetarium,2023-03-23,ACTIVE,psychonauts,"contemplation, learning, science",,en,,True,emumGKChfWAlLswB8KlV
+Let’s be mesmerized by people’s stories,2023-03-23,ACTIVE,listeners,"community, culture, entertainment, storytelling",,en,,True,Z77Z4Qu5Wn1QOniFjaXj
+Let’s dine in the dark,2023-03-23,ACTIVE,foodies,"experience, exploring, food",,en,,True,I0AqrnzUmwGyhFu7dBbP
+Let’s kill some Zombies in VR,2023-03-23,ACTIVE,heroes,"exercise, gaming, virtual reality",,en,,True,IoDoznDlK8UKPwFF4TAG
+Let’s learn about the history of neon,2023-03-23,ACTIVE,hippies,"alternative, culture, hippie, history",,en,,True,90ZHFJ8TpBpEauuIg7IO
+Let’s live on a houseboat,2023-03-23,ACTIVE,expats,"adventure, boat, living",,en,,True,jw9Bs1hTiOutz1ta7gY8
+Let’s take a dip in the canals,2023-03-19,ACTIVE,swimmers,"challenge, city, outdoor, swimming",amsterdam,en,,True,KVB9NgAWuVIncFSsxhY4
+Lass uns stricken lernen,2022-01-01,ACTIVE,Omas,"stricken, quatschen, kaffee",,de,,True,OItjTzX9XTOWgSdooPao
