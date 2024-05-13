@@ -30,6 +30,13 @@ def map_location(location):
                 u'locality': u'Amsterdam',
                 u'subAdministrativeArea': u'Amsterdam',
                 u'subLocality': u'Amsterdam-Centrum'}
+    elif location == 'eagx utrecht':
+        return {u'administrativeArea': None,
+                u'country': u'Virtual',
+                u'isoCountryCode': u'EAGx Utrecht',
+                u'locality': u'EAGx Utrecht',
+                u'subAdministrativeArea': None,
+                u'subLocality': None}
     elif pd.isna(location):
         return {u'administrativeArea': None,
                 u'country': None,
@@ -47,7 +54,7 @@ def parse_categories(categories):
 
 def validate_df(df):
     columns = ['timestamp', 'name', 'description', 'categories', 'location', 'status', 'language', 'sponsored', 'persona', 'ID']
-    nonnull_columns = ['timestamp', 'name', 'categories', 'status', 'language', 'persona']
+    nonnull_columns = ['timestamp', 'name', 'categories', 'status', 'language']
     assert(df[nonnull_columns].isnull().any().any() == False)
 
 def generate_image(template, id, color):
