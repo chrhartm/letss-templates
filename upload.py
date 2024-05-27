@@ -37,6 +37,13 @@ def map_location(location):
                 u'locality': u'EAGx Utrecht',
                 u'subAdministrativeArea': None,
                 u'subLocality': None}
+    elif location == 'eag london':
+        return {u'administrativeArea': None,
+                u'country': u'Virtual',
+                u'isoCountryCode': u'EAG London',
+                u'locality': u'EAG London',
+                u'subAdministrativeArea': None,
+                u'subLocality': None}
     elif pd.isna(location):
         return {u'administrativeArea': None,
                 u'country': None,
